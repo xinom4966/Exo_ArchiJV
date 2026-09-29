@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class EnnemiMere : MonoBehaviour
 {
-    int PV;
-    int Degats;
-    float VitesseDeplacement;
-    float VitesseAttaque;
-    Base Base;
+    private int PV;
+    private int Degats;
+    private float VitesseDeplacement;
+    private float VitesseAttaque;
+    private Base Base;
 
     private void DegatsSubis(int DegatsTir, int PV)
     {

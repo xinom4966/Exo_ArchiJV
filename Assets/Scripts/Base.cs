@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
-    int PV;
+    private int PV;
 
     private void Mort(int PV)
     {

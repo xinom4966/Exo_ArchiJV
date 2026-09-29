@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class TourMere : MonoBehaviour
 {
-    float Cadence;
-    int DegatsTir;
-    Ennemi Cible;
-    int Prix;
-    float Portee;
-    RaycastHit Hit;
+    private float Cadence;
+    private int DegatsTir;
+    private Ennemi Cible;
+    private int Prix;
+    private float Portee;
+    private RaycastHit Hit;
 
     private Ennemi Ciblage(float Portee)
     {

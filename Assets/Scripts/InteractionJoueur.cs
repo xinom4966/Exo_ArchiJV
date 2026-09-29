@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class InteractionJoueur : MonoBehaviour
 {
-    List<TourMere> Tours = new List<TourMere>();
-    int Argent;
-    Transform Position;
+    private List<TourMere> Tours = new List<TourMere>();
+    private int Argent;
+    private Transform Position;
 
     private TourMere SelectionTour()
     {
