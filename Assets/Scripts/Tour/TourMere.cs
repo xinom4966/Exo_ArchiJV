@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class TourMere : MonoBehaviour
 {
-    private float Cadence;
-    private int DegatsTir;
+    [SerializeField] private float Cadence;
+    [SerializeField] private int DegatsTir;
     private Ennemi Cible;
-    private int Prix;
-    private float Portee;
+    [SerializeField] private int Prix;
+    [SerializeField] private float Portee;
     private RaycastHit Hit;
+
+    private void Update()
+    {
+        Physics.SphereCast(transform.position, Portee, transform.forward, out Hit, Portee);
+    }
 
     private Ennemi Ciblage(float Portee)
     {
