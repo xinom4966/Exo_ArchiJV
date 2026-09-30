@@ -13,21 +13,27 @@ public class EnnemiMere : MonoBehaviour
     private void Start()
     {
         Base = FindAnyObjectByType<Base>();
-        if (Base == null)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Update()
     {
+        //vérification de cohérence
+        if (Base == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (!ObjectifAtteint)
         {
             Deplacement(VitesseDeplacement, Base);
             return;
         }
         Chronometre += Time.deltaTime;
-        //if (Chronometre > )
+        if (Chronometre > 1 / VitesseAttaque)
+        {
+            Attaque(VitesseAttaque, Degats, Base);
+            Chronometre = 0;
+        }
     }
 
     private void DegatsSubis(int DegatsTir, int PV)
@@ -48,6 +54,6 @@ public class EnnemiMere : MonoBehaviour
 
     private void Attaque(float VitesseAttaque, int Degats, Base Base)
     {
-
+        Base.PrendreDegats(Degats);
     }
 }

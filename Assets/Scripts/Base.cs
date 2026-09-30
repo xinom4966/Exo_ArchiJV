@@ -6,11 +6,16 @@ public class Base : MonoBehaviour
 
     private void Mort(int PV)
     {
+        Destroy(gameObject);
+    }
+
+    public void PrendreDegats(int Degats)
+    {
         this.PV -= PV;
         if (this.PV <= 0)
         {
             this.PV = 0;
-            Application.Quit();
+            Mort(PV);
         }
     }
 }

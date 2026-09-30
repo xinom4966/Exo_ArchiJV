@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea012e55a01b4bf48b831edadbff1a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ennemi
-  PV: 0
-  Degats: 0
+  PV: 5
+  Degats: 1
   VitesseDeplacement: 0.25
-  VitesseAttaque: 0
+  VitesseAttaque: 1
